@@ -1,4 +1,4 @@
-# 🧹 Sweepkit — Scan and Clean Unused Dev Dependencies
+# 🧹 Sweepkit — Unused Dev Dependencies Scanner & Cleaner
 
 <p align="center">
     <picture>
