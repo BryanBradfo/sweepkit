@@ -111,6 +111,26 @@ sweepkit clean --dry-run
 sweepkit clean --all
 ```
 
+### List globally installed packages
+```bash
+sweepkit global
+
+# Restrict to one ecosystem
+sweepkit global --language node
+```
+
+Each ecosystem is inspected differently, and one is not covered yet:
+
+| Ecosystem | How globals are listed |
+|-----------|------------------------|
+| 🐍 Python | `pip list --format=freeze`, falling back to `pip3` |
+| 🟢 Node.js | `npm list -g --depth=0` |
+| 🦀 Rust | `cargo install --list` |
+| ☕ Java | Gradle wrapper versions found under `~/.gradle/wrapper/dists` |
+| ⚙️ C++ | Not supported, reports nothing |
+
+Ecosystems whose tool is missing are skipped silently. Note that `global` only reports: it never deletes anything, it shows no sizes, and it does not work out which packages are unused. Expect long output, since it lists every global package rather than a filtered set.
+
 ## Supported Ecosystems
 
 SweepKit uses a modular architecture with dedicated language modules for each ecosystem. Each module provides smart detection with context-aware scanning.
@@ -188,8 +208,11 @@ impl LanguageCleaner for GoCleaner {
 - [x] Interactive cleanup with confirmations
 - [x] Per-language cleaner modules
 - [x] Language filtering (`--language` flag)
+- [x] Global package listing (`global` command)
+- [x] Prebuilt binaries published on each tagged release
 - [ ] Global cache scanning (pip, npm, cargo, etc.)
-- [ ] Orphaned package detection
+- [ ] Orphaned package detection, meaning working out which globals are actually unused
+- [ ] Publish to crates.io
 - [ ] Docker image cleanup integration
 - [ ] Scheduled scanning (cron/Task Scheduler)
 - [ ] TUI dashboard with charts
