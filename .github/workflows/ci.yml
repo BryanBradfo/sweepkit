@@ -65,7 +65,11 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Install Rust
-      uses: dtolnay/rust-toolchain@stable
+      # Pinned on purpose: a floating `stable` toolchain combined with
+      # `-D warnings` turns every newly-added clippy lint into a red build,
+      # even on commits that only touch documentation. Bump this knowingly,
+      # using the `lint-future` job below as the early-warning signal.
+      uses: dtolnay/rust-toolchain@1.97
       with:
         components: rustfmt, clippy
     
@@ -73,4 +77,29 @@ jobs:
       run: cargo fmt --check
     
     - name: Run clippy
-      run: cargo clippy -- -D warnings
+      run: cargo clippy --all-targets -- -D warnings
+
+  # Early-warning job: runs the same lints against the newest stable Rust so
+  # that lints introduced upstream surface here as a notice instead of turning
+  # the whole CI red. When this job fails, fix the lint and bump the pinned
+  # toolchain in the `lint` job above.
+  lint-future:
+    name: Lint (latest stable, non-blocking)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        components: rustfmt, clippy
+
+    - name: Check formatting
+      run: cargo fmt --check
+
+    - name: Run clippy
+      run: cargo clippy --all-targets -- -D warnings

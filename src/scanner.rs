@@ -116,7 +116,7 @@ fn scan_with_cleaners(root: &Path, cleaners: &[Box<dyn LanguageCleaner>]) -> Vec
     }
 
     // Sort by size descending
-    found_items.sort_by(|a, b| b.size.cmp(&a.size));
+    found_items.sort_by_key(|item| std::cmp::Reverse(item.size));
 
     found_items
 }
