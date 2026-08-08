@@ -189,6 +189,12 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 ## Star this repo!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=bryanbradfo/sweepkit&type=date&legend=top-left)](https://www.star-history.com/#bryanbradfo/sweepkit&type=date&legend=top-left)
+<a href="https://www.star-history.com/?repos=BryanBradfo%2Fsweepkit&type=date&logscale=&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=BryanBradfo/sweepkit&type=date&theme=dark&logscale&legend=bottom-right&sealed_token=Pgc4HbCRtNHf-35LY5ZKapxHT46FYEJFkRLRQ6FjYDkEjs2PejzUQQilz7kLeFLl-5BiytepnMDH2Up2mfp7eed6ntCZKr8o5FsclqSWa1ZN65LWuiAyY2BRRduDzgJGsj708V1KOROiSbDn-3I0LW_EcOQ4GT9A-7FD0bHp98hWPO0WmjtFpXImaFxh" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=BryanBradfo/sweepkit&type=date&logscale&legend=bottom-right&sealed_token=Pgc4HbCRtNHf-35LY5ZKapxHT46FYEJFkRLRQ6FjYDkEjs2PejzUQQilz7kLeFLl-5BiytepnMDH2Up2mfp7eed6ntCZKr8o5FsclqSWa1ZN65LWuiAyY2BRRduDzgJGsj708V1KOROiSbDn-3I0LW_EcOQ4GT9A-7FD0bHp98hWPO0WmjtFpXImaFxh" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=BryanBradfo/sweepkit&type=date&logscale&legend=bottom-right&sealed_token=Pgc4HbCRtNHf-35LY5ZKapxHT46FYEJFkRLRQ6FjYDkEjs2PejzUQQilz7kLeFLl-5BiytepnMDH2Up2mfp7eed6ntCZKr8o5FsclqSWa1ZN65LWuiAyY2BRRduDzgJGsj708V1KOROiSbDn-3I0LW_EcOQ4GT9A-7FD0bHp98hWPO0WmjtFpXImaFxh" />
+ </picture>
+</a>
 
 If you find this useful, give it a ⭐ — it helps others discover the project!
