@@ -24,3 +24,6 @@ target
 # Added by cargo
 
 /target
+
+# Release archives staged by .github/workflows/release.yml
+/dist

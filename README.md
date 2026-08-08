@@ -41,6 +41,19 @@ As developers, we accumulate **gigabytes** of dev dependencies over time:
 
 ## Installation
 
+### From a pre-built binary (no toolchain needed)
+
+Grab the archive for your platform from the [latest release](https://github.com/BryanBradfo/sweepkit/releases/latest) — Linux (x86_64), macOS (Apple Silicon & Intel) and Windows (x86_64) are provided.
+
+```bash
+# Linux / macOS
+tar xzf sweepkit-<version>-<target>.tar.gz
+sudo mv sweepkit-<version>-<target>/sweepkit /usr/local/bin/
+sweepkit --version
+```
+
+On Windows, unzip the archive and add the folder containing `sweepkit.exe` to your `PATH`.
+
 ### From source (requires Rust toolchain)
 ```bash
 git clone https://github.com/BryanBradfo/sweepkit.git
